@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>19</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules\bootstrap\dist\css\bootstrap.css"
+    />
+  </head>
+  <link rel="stylesheet" href="./styles.css" />
+  <body class="bg-light">
+    <div class="container-fluid px-1 px-sm-3 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+        <div
+          class="weatherFormWrapper d-flex justify-content-center align-items-center"
+        >
+          <form id="weatherForm">
+            <label class="form-label"> Input your city: </label>
+            <input type="text" id="input" class="form-control" />
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+          </form>
+        </div>
+        <div class="row card0 mt-5">
+          <div class="card1 col-lg-8 col-md-7">
+            <div class="text-center">
+              <img class="image mt-5" src="https://i.imgur.com/M8VyA2h.png" />
+            </div>
+            <div class="row px-3 mt-3 mb-3">
+              <h1 class="large-font mr-3"><span class="temp"></span>°C</h1>
+              <div class="d-flex flex-column mr-3">
+                <h2 class="place mt-3 mb-0"></h2>
+                <small class="date"></small>
+              </div>
+              <div class="d-flex flex-column text-center">
+                <h3 class="fa fa-sun-o mt-4">
+                  <p class="description"></p>
+                  <div class="weatherIcon"></div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div id="weatherInfo" class="invisible d-flex col-lg-4 col-md-5">
+            <div class="mr-5">
+              <div class="line my-5"></div>
+
+              <p>Weather Details</p>
+              <div class="row px-3">
+                <p class="light-text">Humidity:</p>
+                <p class="ml-auto"><span class="humidity"></span>%</p>
+              </div>
+              <div class="row px-3">
+                <p class="light-text">Wind:</p>
+                <p class="ml-auto"><span class="wind"></span>km/h</p>
+              </div>
+              <div class="row px-3">
+                <p class="light-text">Deg:</p>
+                <p class="ml-auto"><span class="deg"></span>°</p>
+              </div>
+
+              <div class="line mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
