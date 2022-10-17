@@ -1,0 +1,14 @@
+body {
+    background-color: blueviolet;
+}
+.swiper {
+    width: 600px;
+    height: 300px;
+    margin: 50px 0;
+  }
+
+  .swiper-slide {
+    align-items: center;
+    text-align: center;
+    margin-top: -55px;
+  }
