@@ -1,0 +1,26 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.post {
+    font-size: 20px;
+}
+
+.comment-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.comment {
+    font-size: 14px;
+    border: 1px solid grey;
+    width: 47%;
+    padding: 0 5px;
+}
