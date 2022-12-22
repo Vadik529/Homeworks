@@ -33,6 +33,10 @@ code {
   text-decoration: line-through;
 }
 
+.unshow {
+  display: none;
+}
+
 .lds-ripple {
   display: inline-block;
   position: relative;

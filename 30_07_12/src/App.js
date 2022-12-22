@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import TodoList from "./Todo/TodoList";
 import Context from "./context";
 import Loader from "./loader";
-import Modal from "./Model/Modal";
 
 const AddTodo = React.lazy(() => import("./Todo/AddTodo"));
 
@@ -53,7 +52,6 @@ function App() {
       <div className="wrappper">
         <h1>Список дел</h1>
 
-        <Modal />
         <React.Suspense fallback={<p>Loading...</p>}>
           <AddTodo onCreate={addTodo} />
         </React.Suspense>
