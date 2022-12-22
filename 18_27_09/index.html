@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lesson 17</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./node_modules\swiper\swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./imgs/0.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/1.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/2.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/3.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/4.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/5.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/6.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/7.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/8.jfif" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./imgs/9.jfif" alt="slide" />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </body>
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+    const swiper = new Swiper(".swiper", {
+      direction: "horizontal",
+      loop: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      autoplay: {
+        delay: 5000,
+      },
+
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+  </script>
+</html>
