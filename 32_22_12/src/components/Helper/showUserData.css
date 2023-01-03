@@ -1,0 +1,18 @@
+.userWrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.userWrapper img {
+    width: 250px;
+    height: auto;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+
