@@ -1,0 +1,50 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #437A16;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;
+    background: #CDFEAA;
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  header {
+    display: flex;
+  }
+
+  .form {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+  }
+
+  .header p {
+    justify-content: center;
+  }
