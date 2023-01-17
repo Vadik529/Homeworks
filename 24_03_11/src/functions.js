@@ -37,10 +37,10 @@ function appendSelectHtml(callback, options, parentEl, defaultOptionName) {
   const selectEl = document.createElement("select");
   selectEl.classList.add("form-select");
 
-  selectEl.innerHTML += `<option value="">${defaultOptionName}</option>`;
+  selectEl.insertAdjacentHTML('beforeend', `<option value="">${defaultOptionName}</option>`);
 
   options.forEach(({ text, disabled }, index) => {
-    selectEl.innerHTML += `<option value="${index}">${text}</option>`;
+    selectEl.insertAdjacentHTML('beforeend', `<option value="${index}">${text}</option>`);
   });
 
   parentEl.append(selectEl);
