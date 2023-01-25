@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Regular expressions</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form name="mainForm">
+      <div>
+        <input name="password" />
+        <p id="upperLetter">First symbol Upper (Example: Vadim Vereshchak)</p>
+      </div>
+      <div>
+        <input name="phone" />
+        <p id="phone">Correct phone format (Example: +380731111111)</p>
+      </div>
+      <div>
+        <input name="mail" />
+        <p id="mail">
+          Correct email format (Example: vadim.vereshchak.99@gmail.com)
+        </p>
+      </div>
+      <div>
+        <input name="card" />
+        <p id="card">
+          Correct card format (Example: 1111222233334444 or with "1111 2222" or
+          "1111-2222")
+        </p>
+      </div>
+      <button type="submit" disabled>Save</button>
+    </form>
+  </body>
+  <script src="./index.js"></script>
+</html>
