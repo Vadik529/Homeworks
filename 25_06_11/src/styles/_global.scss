@@ -1,0 +1,14 @@
+h1 {
+  color: aqua;
+}
+
+html {
+  font-family: generalFont;
+}
+
+.container {
+  background: url("../images/js-logo.png");
+  &__subheader {
+    color: blueviolet;
+  }
+}

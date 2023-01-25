@@ -1,0 +1,63 @@
+.form_input-items {
+  display: block;
+}
+
+.input-through {
+  text-decoration: line-through;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+.visible {
+  display: flex;
+}
+
+.unvisible {
+  display: none;
+}
+
+.close:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.close {
+  margin-left: 5px;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.button-add {
+  background: blue;
+  color: white;
+}
+
+.button-add:hover {
+  cursor: pointer;
+  box-shadow: inset;
+}
+
+.classError {
+  border: 1px solid red;
+}
+
+.errorText {
+  color: red;
+  font-weight: bold;
+}
+
+.create-task {
+  display: flex;
+}
+
+.filterOption {
+  margin: 23px 0 0 5px;
+}
+
