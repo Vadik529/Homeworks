@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My text</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="create-task">
+      <form id="someForm" class="form" name="taskForm">
+        <div class="form_item">
+          <label class="form_label">Создайте задачу</label>
+          <div class="inputWrapper">
+            <input name="input" type="text" class="input" required/>
+          </div>
+          <button class="button-add">Добавить</button>
+        </div>
+      </form>
+      <div class="filter">
+        <select class="filterOption" name="select" id="select">
+          <option value="all">All</option>
+          <option value="done">Done</option>
+          <option value="inProgress">In Progress</option>
+        </select>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
