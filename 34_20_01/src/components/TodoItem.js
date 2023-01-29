@@ -1,8 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { toggleComplete, deleteTodo } from "../redux/todoSlice";
+import { statusTodo, deleteFetchTodo } from "../redux/todoSlice";
 import { Box, Button, List, Checkbox } from "@mui/material";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutlined";
 
 import "../index.css";
 
@@ -10,11 +9,11 @@ export const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
 
   const handleCompleteClick = () => {
-    dispatch(toggleComplete({ id: id, completed: !completed }));
+    dispatch(statusTodo(id));
   };
 
   const handleDeleteTodo = () => {
-    dispatch(deleteTodo({ id: id }));
+    dispatch(deleteFetchTodo(id));
   };
 
   return (
@@ -37,7 +36,7 @@ export const TodoItem = ({ id, title, completed }) => {
           <b>{title}</b>
         </Box>
         <Button color="error" variant="outlined" onClick={handleDeleteTodo}>
-          <DeleteOutlineIcon />
+          Delete
         </Button>
       </Box>
     </List>
