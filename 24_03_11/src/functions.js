@@ -39,7 +39,7 @@ function appendSelectHtml(callback, options, parentEl, defaultOptionName) {
 
   selectEl.insertAdjacentHTML('beforeend', `<option value="">${defaultOptionName}</option>`);
 
-  options.forEach(({ text, disabled }, index) => {
+  options.forEach(({ text }, index) => {
     selectEl.insertAdjacentHTML('beforeend', `<option value="${index}">${text}</option>`);
   });
 
