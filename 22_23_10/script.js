@@ -1,63 +1,72 @@
-const form = document.getElementById("mainForm");
-
-class InputParent {
-  constructor(name, type, id) {
-    this.name = name;
-    this.type = type;
-    this.id = id;
+class FormConstructor {
+  constructor() {
+    this.form = document.createElement("form");
   }
 
-  createInput() {
-    this.element = document.createElement("input");
-    this.element.name = this.name;
-    this.element.type = this.type;
+  createInput(type, name, labelText) {
+    const input = document.createElement("input");
+    input.type = type;
+    input.name = name;
+
+    const label = this.createLabel(labelText);
+    this.form.appendChild(label);
+    label.appendChild(input);
+
+    return input;
+  }
+
+  createCheckbox(name, value, labelText) {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = name;
+    checkbox.value = value;
+
+    const label = this.createLabel(labelText);
+    this.form.appendChild(label);
+    label.appendChild(checkbox);
+
+    return checkbox;
+  }
+
+  createRadio(name, value, labelText) {
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = name;
+    radio.value = value;
+
+    const label = this.createLabel(labelText);
+    this.form.appendChild(label);
+    label.appendChild(radio);
+
+    return radio;
   }
 
   createLabel(text) {
     const label = document.createElement("label");
-
     label.textContent = text;
-    label.setAttribute("for", this.id);
-    label.prepend(this.element);
-
-    form.append(label);
+    return label;
   }
 }
 
-class Input extends InputParent {
-  constructor(name, types, id) {
-    super(name, types, id);
-  }
-  addPlaceholder(placeholder) {
-    this.element.placeholder = placeholder;
-  }
-}
+const myForm = new FormConstructor();
 
-const input = new Input("input", "input", Date.now());
-input.createInput();
-input.addPlaceholder("First input");
-input.createLabel("Input your text");
+const myInput = myForm.createInput("text", "myInputName", "My Input Label");
 
-class Checkbox extends InputParent {
-  constructor(name, types, id) {
-    super(name, types, id);
-  }
-}
+const myCheckbox = myForm.createCheckbox(
+  "myCheckboxName",
+  "myCheckboxValue",
+  "My Checkbox Label"
+);
 
-const checkbox = new Checkbox("checkbox", "checkbox", Date.now());
-checkbox.createInput();
-checkbox.createLabel("Checked this checkbox");
+const myFirstRadio = myForm.createRadio(
+  "myRadioName",
+  "myRadioValue",
+  "My Radio Label"
+);
+const mySecondRadio = myForm.createRadio(
+  "myRadioName",
+  "myRadioValue",
+  "My Radio Label"
+);
 
-class Radio extends InputParent {
-  constructor(name, types, id) {
-    super(name, types, id);
-  }
-}
-
-const radio = new Radio("contact", "radio", Date.now());
-radio.createInput();
-radio.createLabel("Select radio");
-
-const radio1 = new Radio("contact", "radio", Date.now());
-radio1.createInput();
-radio1.createLabel("Select another radio");
+document.body.appendChild(myForm.form);
